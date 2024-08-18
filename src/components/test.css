@@ -1,0 +1,113 @@
+/* Profile.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e9ecef;
+}
+
+.profile-content {
+    flex: 1;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.profile-subtitle {
+    color: #777;
+    font-size: 16px;
+}
+
+.profile-about {
+    margin-bottom: 20px;
+}
+
+.profile-about h2 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.profile-about p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.profile-welcome {
+    margin-bottom: 20px;
+}
+
+.welcome-popup {
+    background: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.welcome-message {
+    margin: 0;
+    color: #555;
+}
+
+.profile-footer {
+    display: flex;
+    align-items: center;
+}
+
+.profile-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.profile-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-button:hover {
+    background-color: #0056b3;
+}

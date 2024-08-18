@@ -1,0 +1,630 @@
+
+
+
+body, html {
+    background-color: black !important;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.logo{
+    display: flex;
+    gap: 8px;
+}
+
+
+
+.navbar {
+    position: fixed; 
+    left: 0; 
+    top: 0;
+    display: flex;
+    align-items: center; 
+    box-sizing: border-box;
+    background-color: black;
+    padding: 15px 30px;
+    width: 100vw; 
+    border-bottom: 1px solid #ccc;
+   
+            justify-content: space-between;
+          
+}
+
+
+
+
+
+.navbar-image {
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    margin-right: 10px;
+}
+
+.navbar-text {
+    color: white;
+}
+
+.navbar-name {
+    font-size: 1.2vw;
+    margin: 0;
+}
+
+.navbar-subtitle {
+    font-size: 1vw;
+    color: #ccc;
+}
+
+
+ .profile-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+    padding: 100px 90px 50px;
+}
+
+/* .left-column {
+    width: 40%;
+    padding-right: 600px;
+}
+
+.right-column {
+    width: 60%;
+} */
+
+.left-column {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.right-column {
+    width: 50%;
+}
+
+
+.profile-header {
+    margin-top: 40px;
+    margin-left: 0px;
+    padding-right:200px;
+   
+
+}
+
+.company-heading {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.company-subtitle {
+    font-size: 1.6em;
+    /* margin: 10px 0 0 0; */
+    line-height: 1.4;
+    max-width: 80%;
+    color: #bbb;
+}
+
+.ask-about-section {
+    margin-top: 100px;
+}
+
+.ask-about-section h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question-item {
+    /* background-color: #1e3a8a; */
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    width: 350px; /* Limit width to 200px */
+     padding: 0;
+    word-wrap: break-word; /* Ensures words break at boundaries */
+    overflow-wrap: break-word;
+}
+
+/* .question-item:hover {
+    background-color: #2563eb;
+} */
+
+
+
+.suggested-questions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto; 
+    gap: 15px;
+    padding: 20px;
+    padding-top: 50px;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+.question-card {
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    aspect-ratio: 1 / 1;
+}
+
+
+
+.question-card-load {
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    aspect-ratio: 1 / 1;
+    background-color: #181818; 
+}
+
+.question-card:nth-child(1) { background-color: #B5EFE8; }
+.question-card:nth-child(2) { background-color: #E6D0F5; }
+.question-card:nth-child(3) { background-color: #E6F5D0; }
+.question-card:nth-child(4) { background-color: #2F3D4C; color: white; }
+
+.question-card p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600 !important;
+    line-height: 1.4;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.question-card:nth-child(4) p { color: white; }
+
+.arrow {
+    font-size: 28px;
+    align-self: flex-end;
+    color: black;
+}
+
+.question-card:nth-child(4) .arrow { color: white; }
+
+.floating-container {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 8px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 85vh
+    
+}
+
+.floating-input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+}
+
+.floating-input::placeholder {
+    color: #888;
+}
+
+.floating-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    /* color: white; */
+}
+
+/* .icon-2xl {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}  */
+
+/* .floating-button {
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+} */
+
+.button-circle {
+    width: 50px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.button-circle:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.icon-2xl {
+    width: 40px;
+    height: 30px;
+    fill: white;
+    /* stroke: white; */
+}
+
+
+
+
+.expert_profile{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+
+.Waitlist-container {
+    background-color: rgb(237, 244, 249);
+    color: black;
+    margin-top: 10vw; /* Top margin */
+    margin-bottom: 15vw; /* Bottom margin */
+    width: 60vw; /* Width of the div */
+    padding: 5vh; /* Padding inside the div */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center; /* Center items vertically */
+  
+    gap: 10px; /* Optional: Add space between elements */  
+ }
+
+
+    .waitlist-header{
+        font-size: 34px;
+        width: 30vw;
+        margin-left: 3vw
+    }
+
+    .parent-waitlist
+    { margin-left: 5vw;}
+
+    .waitlist-sub
+    {
+        color: #505c69;
+       
+    }
+
+    .waitlist-button {
+        background-color: #0f3aa7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px  !important;
+    }
+
+    
+    .waitlist-button:hover {
+        background-color: #1650e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    }
+
+
+
+
+
+@media (max-width: 768px) {
+
+   
+.expert_profile{
+    
+width: 60vw;
+padding: 0px;
+margin: 0;
+justify-content: flex-end;
+}
+
+.navbar{
+    padding: 10px;
+}
+
+    .navbar-image {
+        border-radius: 50%;
+        width: 9vw;
+        height: 9vw;
+       
+    }
+    
+    .navbar-text {
+        color: white;
+    }
+    
+    .navbar-name {
+        font-size: 3.5vw;
+        margin: 0;
+    }
+    
+    .navbar-subtitle {
+        font-size: 2.5vw;
+        color: #ccc;
+    }
+
+
+
+
+
+
+
+
+    
+.Waitlist-container {
+    background-color: rgb(237, 244, 249);
+    color: black;
+    margin-top: 30vw; /* Top margin */
+    margin-bottom: 25vh; /* Bottom margin */
+    width: 80vw; /* Width of the div */
+    padding: 5vw; /* Padding inside the div */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    display: block;
+  
+   
+ }
+
+
+    .waitlist-header{
+        font-size: 24px;
+        width: 75vw;
+        padding: 0;
+      
+    }
+
+    .parent-waitlist
+    { margin-left: 5vw;}
+
+    .waitlist-sub
+    {
+        color: #505c69;
+       font-size: 18px;
+    }
+
+    .waitlist-button {
+        background-color: #0f3aa7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    }
+
+    
+    .waitlist-button:hover {
+        background-color: #1650e5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .main-content {
+        flex-direction: column;
+   padding-left: 5vw;
+   padding-right: 0;
+
+    }
+    .left-column{
+        width: 100%;
+    
+        padding-right: 0;
+background-color: black;
+    }
+
+ 
+
+.company-subtitle{
+    width: 95vw;
+    max-width: 95%;
+}
+
+.profile-header {
+    width: 95vw;
+    font-size: 10px;
+    margin-bottom: 0;
+  
+}
+
+    .company-heading
+ {  padding-top: 5vh;
+    width: 95vw;
+    font-size: 45px;
+    max-width: 100%;
+}
+
+
+    html, body{
+        background-color: #000000 !important;
+    }
+
+
+    .suggested-questions {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        width: 70vw;
+        padding-top: 0;
+        padding: 0;
+        margin-left: 10vw;
+       
+    }
+
+    .ask-about-section{
+        margin-top: 200px;
+       
+    }
+
+
+    .question-card p {
+       
+        width: 60vw; /* Adjust width as needed */
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        aspect-ratio: 1/1;
+        
+    }
+
+    .left-column{
+        padding-left: 0;
+    }
+
+    .right-column 
+    {padding-left: 0;}
+
+    .floating-container {
+        position: fixed;
+        z-index: 999;
+        bottom: 1vh; /* Adjust the distance from the bottom as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center horizontally */
+        background-color: rgba(136, 129, 129, 0.85);
+        backdrop-filter: blur(10px);
+        padding: 8px;
+        border-radius: 30px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+        width: 90vw; /* Adjust the width as a percentage of viewport width */
+        height: 5vh;
+      
+       /* Ensure it's above other content */
+    }
+    
+    .floating-input {
+        flex: 1;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 12px 20px;
+        font-size: 16px;
+        color: white;
+    }
+
+    .profile-header{
+        padding-right: 0;
+    }
+    
+    .floating-input::placeholder {
+        color: #ffffff;
+    }
+
+   
+    .arrow {
+        font-size: 24px;
+        margin-top: 5px;
+    }
+}
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .suggested-questions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .question-card p {
+        font-size: 18px;
+    }
+}

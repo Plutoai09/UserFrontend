@@ -62,7 +62,7 @@ const DescQuestions = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8080/generate_followup_questions",
+        "http://52.91.179.186:8080/generate_followup_questions",
         {
           goals: answers[0],
         }
@@ -80,7 +80,7 @@ const DescQuestions = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8080/generate_explanation_question",
+        "http://52.91.179.186:8080/generate_explanation_question",
         {
           becoming_question: becomingQuestion,
           selected_option: selectedBecomingOption,
@@ -118,7 +118,7 @@ const DescQuestions = () => {
   const handleNext = async () => {
     setIsNextLoading(true);
     try {
-      const response = await axios.post("http://127.0.0.1:8080/getquote", {
+      const response = await axios.post("http://52.91.179.186:8080/getquote", {
         answer: answers[currentQuestion],
       });
       setCurrentQuote(response.data.quote);
@@ -162,14 +162,14 @@ const DescQuestions = () => {
       ];
 
       // Send all QA pairs to Airtable
-      await axios.post("http://127.0.0.1:8080/store_all_qa", {
+      await axios.post("http://52.91.179.186:8080/store_all_qa", {
         userid: "user123", // You should replace this with the actual user ID
         qa_pairs: allAnswers,
       });
 
       // Get book recommendations
       const response = await axios.post(
-        "http://127.0.0.1:8080/recommend_book",
+        "http://52.91.179.186:8080/recommend_book",
         {
           mergedAnswers: allAnswers,
         }

@@ -12,11 +12,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="gtu/profile" element={<Profile />} />
-        <Route path="gtu/chat" element={<ChatInterface />} />
-        <Route path="gtu/welcome/:name" element={<WelcomePage />} />
-        <Route path="gtu/questions" element={<Questions />} />
-        <Route path="gtu/next" element={<DescQuestions />} />
+        <Route path="/gtu/profile" element={<Profile />} />
+        <Route path="/gtu/chat" element={<ChatInterface />} />
+        <Route path="/gtu/welcome/:name" element={<WelcomePage />} />
+        <Route path="/gtu/questions" element={<Questions />} />
+        <Route path="/gtu/next" element={<DescQuestions />} />
 
         {/* <Route path='/' element={<ReelPage />} /> */}
         <Route path="/" element={<Waitlist />} />
